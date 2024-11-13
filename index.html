@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRILL-A-VIZUAL</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>GRILL-A-VIZUAL</h1>
+            <p>Customize your grilling experience!</p>
+        </header>
+
+        <section id="recipe-selector">
+            <form id="grillForm">
+                <h2>Select Your Ingredients</h2>
+
+                <div>
+                    <label>Meat:</label><br>
+                    <input type="checkbox" name="meat" value="beef"> Beef
+                    <input type="checkbox" name="meat" value="chicken"> Chicken
+                    <input type="checkbox" name="meat" value="goat"> Goat
+                    <input type="checkbox" name="meat" value="seafood"> Seafood
+                </div>
+
+                <div>
+                    <label>Vegetables:</label><br>
+                    <input type="checkbox" name="vegetables" value="peppers"> Peppers
+                    <input type="checkbox" name="vegetables" value="onions"> Onions
+                    <input type="checkbox" name="vegetables" value="mushrooms"> Mushrooms
+                </div>
+
+                <div>
+                    <label>Spices:</label><br>
+                    <input type="checkbox" name="spice" value="salt"> Salt
+                    <input type="checkbox" name="spice" value="paprika"> Paprika
+                    <input type="checkbox" name="spice" value="cumin"> Cumin
+                    <input type="checkbox" name="spice" value="chili"> Chili Pepper
+                </div>
+
+                <div>
+                    <label>Grilling Method:</label><br>
+                    <input type="radio" name="method" value="charcoal"> Charcoal
+                    <input type="radio" name="method" value="gas"> Gas
+                    <input type="radio" name="method" value="indoor"> Indoor
+                    <input type="radio" name="method" value="outdoor"> Outdoor
+                </div>
+
+                <button type="button" onclick="generateRecipe()">Generate Recipe</button>
+            </form>
+        </section>
+
+        <section id="output">
+            <h2>Your Custom Grill Recipe:</h2>
+            <div id="recipeOutput"></div>
+        </section>
+    </div>
+
+    <script src="./src/grillscript.js"></script>
+</body>
+
+</html>
