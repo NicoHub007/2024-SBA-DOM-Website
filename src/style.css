@@ -57,3 +57,36 @@ button:hover {
     background-color: #ffe4b5;
     border-radius: 5px;
 }
+
+.side-img{
+    position: fixed;
+    width: 25%;
+    height: 50%;
+    /* top: 1%; */
+    /* bottom: 5%; */
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: .5%;
+}
+
+#cornImg{
+    left: 0;
+    top: 1%;
+}
+
+#medleyImg{
+    right: 0;
+    top: 1%;
+}
+
+#jerkImg {
+    left: 0;
+    bottom: 0;
+    padding-top: 1.5%;
+}
+
+#meatzImg {
+    right: 0;
+    bottom: 0;
+    padding-top: 1.5%;
+}
