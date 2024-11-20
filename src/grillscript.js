@@ -24,7 +24,17 @@ document.addEventListener('DOMContentLoaded', () => {
             <p><strong>Method:</strong> ${method}</p>
         `;
 
-        output.innerHTML = recipe;
+        // Create a DocumentFragment to insert the recipe
+        const fragment = document.createDocumentFragment();
+        const recipeDiv = document.createElement('div');
+        recipeDiv.innerHTML = recipe;
+        fragment.appendChild(recipeDiv);
+
+        // Insert the fragment into the output area
+        output.innerHTML = '';
+        output.appendChild(fragment);
+
+        // Apply random theme and change background using BOM
         applyTheme();
     }
 
@@ -35,5 +45,33 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.backgroundColor = randomTheme;
     }
 
-    window.generateRecipe = generateRecipe;
+    // Add event listener to the generate button
+    const generateButton = document.getElementById('generateButton');
+    generateButton.addEventListener('click', generateRecipe);
+
+    // Function to iterate over checkboxes and add a class to the selected ones
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            // Modify style or classes of elements
+            if (checkbox.checked) {
+                checkbox.parentNode.style.backgroundColor = "#e0ffe0"; // Highlight selected
+            } else {
+                checkbox.parentNode.style.backgroundColor = ""; // Reset when unchecked
+            }
+        });
+    });
+
+    // Example of using the parent-child-sibling relationship
+    const formSections = document.querySelectorAll('form div');
+    formSections.forEach(section => {
+        section.addEventListener('mouseover', () => {
+            section.style.border = "2px solid #ff6347"; // Highlight section on hover
+        });
+        section.addEventListener('mouseout', () => {
+            section.style.border = ""; // Reset border
+        });
+    });
+
+    window.generateRecipe = generateRecipe; // Expose function globally for the button
 });

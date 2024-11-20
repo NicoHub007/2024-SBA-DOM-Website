@@ -18,7 +18,6 @@
         <section id="recipe-selector">
             <form id="grillForm">
                 <h2>Select Your Ingredients</h2>
-
                 <div>
                     <label>Meat:</label><br>
                     <input type="checkbox" name="meat" value="beef"> Beef
@@ -26,14 +25,12 @@
                     <input type="checkbox" name="meat" value="goat"> Goat
                     <input type="checkbox" name="meat" value="seafood"> Seafood
                 </div>
-
                 <div>
                     <label>Vegetables:</label><br>
                     <input type="checkbox" name="vegetables" value="peppers"> Peppers
                     <input type="checkbox" name="vegetables" value="onions"> Onions
                     <input type="checkbox" name="vegetables" value="mushrooms"> Mushrooms
                 </div>
-
                 <div>
                     <label>Spices:</label><br>
                     <input type="checkbox" name="spice" value="salt"> Salt
@@ -41,7 +38,6 @@
                     <input type="checkbox" name="spice" value="cumin"> Cumin
                     <input type="checkbox" name="spice" value="chili"> Chili Pepper
                 </div>
-
                 <div>
                     <label>Grilling Method:</label><br>
                     <input type="radio" name="method" value="charcoal"> Charcoal
@@ -49,8 +45,7 @@
                     <input type="radio" name="method" value="indoor"> Indoor
                     <input type="radio" name="method" value="outdoor"> Outdoor
                 </div>
-
-                <button type="button" onclick="generateRecipe()">Generate Recipe</button>
+                <button type="button" id="generateButton">Generate Recipe</button>
             </form>
         </section>
 
